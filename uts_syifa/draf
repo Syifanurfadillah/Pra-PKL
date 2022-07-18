@@ -1,0 +1,275 @@
+<!-- PHP -->
+<?php
+        echo "<center>";
+        if (isset($_POST ['save'])){
+        $pilih = $_POST ['satu'];
+        echo "<form method =POST action = hasil.php>";
+        if ($pilih){
+        for($pesan = 1; $pesan <= $pilih; $pesan++){?>
+
+  <div class="card">
+  <div class="card-header">
+
+  <table>
+          <tr><?php echo "Data Siswa Ke-$pesan";?></tr>
+  </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+<div class="card" style="width: 50rem;">
+  <div class="card-header">
+    <!-- PHP -->
+      <?php
+        echo "<center>";
+        if (isset($_POST ['save'])){
+        $pilih = $_POST ['satu'];
+        echo "<form method =POST action = hasil.php>";
+        if ($pilih){
+        for($pesan = 1; $pesan <= $pilih; $pesan++){?>
+
+  <table>
+          <tr><?php echo "Data Siswa Ke-$pesan";?></tr>
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <?php
+        }
+      }
+    }
+    ?>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+
+if ($pilih){
+        for($pesan = 1; $pesan <= $pilih; $pesan++){
+            echo "<table>";
+            echo "<tr>";
+            echo "<br>";
+            echo "Data Siswa Ke-$pesan ";
+            echo "<td>NIS : </td>";
+            echo "<td><input type=number name=nis[] value=></td>";
+            echo "</tr>";
+
+            echo "<tr>";
+            echo "<td>Nama : </td>";
+            echo "<td><input type=text name=nama[] value=></td>";
+            echo "<br>";
+            echo "</tr>";
+
+            echo "<tr>";
+            echo "<td>Kelas : </td>";
+            echo "<td><input type=birthday name=kelas[] value=></td>";
+            echo "</tr>";
+
+            echo "<tr>";
+            echo "<td>Bahasa Indonesia : </td>";
+            echo "<td><input type=number name=indo[] value=></td>";
+            echo "<br>";
+            echo "</tr>";
+
+            echo "<tr>";
+            echo "<td>Bahasa Inggris : </td>";
+            echo "<td><input type=number name=inggris[] value=></td>";
+            echo "<br>";
+            echo "</tr>";
+
+            echo "<tr>";
+            echo "<td>Matematika : </td>";
+            echo "<td><input type=number name=mtk[] value=></td>";
+            echo "<br>";
+            echo "</tr>";
+
+            echo "<tr>";
+            echo "<td>Produktif : </td>";
+            echo "<td><input type=number name=pro[] value=></td>";
+            echo "</tr>";
+            echo "</table>";
+
+        }
+    }
+
+    echo "<tr>";
+    echo "<td></td>";
+    echo "<input type=submit name=simpan value=Simpan>";
+    echo "</tr>";
+    echo "</form>";
+    
+
+    
+
+
+}
+  ?>
+     <br>
+     <br>
+
+  </div>
+</div>
+</center>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+    <p class="card-text"><font face="Century Gothic">Jumlah</font></p>
+    <input type="number" name="jk" value="Laki-laki">
+    <center>
+      <a href="soal1.php" class="btn btn-primary" >Proses</a>
+    </center>
+
+
+
+
+<!-- CARDS -->
+
+<center>
+<br>
+    <img src="logo.png" width="150" height="120" alt="">
+</nav>
+<div class="container">
+<div class="card" style="width: 25rem;">
+  <div class="card-body">
+  <form method ="POST" action = "">
+  <font face=Times New Roman><h4>Syarat Masuk Ke MIKO MALL</h4></font>
+    <div class="content">
+                <table>
+                  <br>
+                <tr>
+                    <td>Nama Anda</td>
+                    <td>:</td>
+                    <td><input type="text" name="nama" value=""></td>
+                    
+                </tr>
+               
+                <tr>
+                    <td><br>
+                      Jenis Kelamin &ensp;</td>
+                    <td><br>:&ensp;</td>
+                    <td><br><input type="radio" name="jk" value="Laki-laki">&nbsp;Laki-laki &ensp;
+                    <input type="radio" name="jk" value="Perempuan">&nbsp;Perempuan </td>
+                </tr>
+               
+                <tr>
+                    <td><br>Status Vaksin</td>
+                    <td><br>:</td>
+                    <td><br> <select name="status">
+                    <option value="stts">---- Status Vaksin ----</option>
+                    <option value="Belum Vaksin">---- Belum Vaksin ----</option>
+                    <option value="Sudah Vaksin">---- Sudah Vaksin ----</option>
+                    </select></td>
+                </tr>
+
+                <tr>
+                  <td><br></td>
+                  <td><br></td>
+                  <td><br><input type="submit" name="simpan" value="KIRIM"></td>
+                </tr>
+            
+                    </table>
+			</div>
+		</div>
+</form>
+  </div>
+</div>
+</div>
+</center>
+
+<!-- CARDS 2 -->
+     
+<div class="container">
+    <br>
+    <center>
+    <div class="card" style="width: 25rem;">
+<div class="card-body">
+<?php
+
+if(isset($_POST['simpan'])){
+  $nama = $_POST['nama'];
+  $status = $_POST['status'];
+  $jk = $_POST['jk'];
+  echo "<b><h3>Pendataan Diri </h3></b> <br>";
+ 
+
+  if($status == "Sudah Vaksin"){
+    echo "<td></td>";
+    echo "<td></td>";
+      echo"Nama Anda    : $nama <br>";
+      echo "Jenis Kelamin   : $jk <br>";
+      echo"Status Vaksin    : $status <br>";
+      echo "<br>";
+      echo"<h5><i>Diizinkan</i></h5>";
+     
+  }
+  else if($status == "Belum Vaksin"){
+    echo"Nama Anda    : $nama <br> ";
+    echo "Jenis Kelamin   : $jk <br>";
+    echo"Status Vaksin  : $status <br>";
+    echo "<br>";
+    echo"<h5><i>Tidak Diizinkan</i></h5>";
+    echo "<br>";
+    echo "<a href='https://www.pedulilindungi.id/'>Silahkan Daftar Vaksin</a>";
+    
+  }
+}
+?>
+<br>
+<br>
+</div>
+</div>
+    </center>
+  </div>

@@ -1,0 +1,203 @@
+buatlah struktur  array dibawah ini
+
+ada dua dosen bernama "Aceng fikri & ujang betok" memiliki 6 mahasiswa yang bernama "bebas",  
+masing-masing dosen memiliki 3 mahasiswa. Ke enam mahasiswa tersebut memiliki 3
+mata kuliah yang berbeda, dan memilikii 2 hobi yg berbeda
+
+silahkan buat array di atas dan tampilkan menggunakan foreach output :
+    Nama dosen : aceng fikri
+    Nama mahasiswa : ahmad
+    mata kuliah : -rpl
+                  -database
+                  -oop
+    hobi        : futsal dan badminton
+
+
+
+
+
+
+
+
+<?php
+
+for($a = 0; $a <6; $a++){
+  echo "<tr style='background-color:white;'>";
+
+  for($mn= 0; $m <7; $m++){
+    if($a%2 ==0){
+      echo "<td bgcolor='#D4E6F1'>" . $laporan_penjualan[$a][$m] . "</td>";
+    }else if($a%2 == 1){
+      echo "<td>" . $laporan_penjualan[$a][$m] . "</td";
+    }
+  }
+  echo "</tr>";
+}
+
+?>
+
+
+for ($b = 0; $b < 6; $b++) {
+        echo "<tr>";
+        for ($k = 0; $k < 7; $k++) {
+            echo "<td>" . $barang[$b][$k] . "</td>";
+        }
+        echo "</tr>";
+    }
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <?php
+    $barang = [
+        ["Komputer", 100, 90, 120, 80, 110, 500],
+        ["Laptop", 50, 70, 110, 100, 80, 410],
+        ["Hp", 150, 200, 160, 110, 90, 710],
+        ["Ps", 40, 20, 60, 30, 70, 220],
+        ["Tablet", 110, 130, 100, 80, 50, 470],
+        ["Modem", 350, 200, 100, 130, 230, 1010]
+    ];
+    ?>
+    <table cellpadding="9" align="center" border="2">
+        <tr>
+            <th colspan="7">Laporan Penjualan Barang Akhir Bulan</th>
+        </tr>
+        <tr>
+            <th>Nama Barang</th>
+            <th>Januari</th>
+            <th>Februari</th>
+            <th>Maret</th>
+            <th>April</th>
+            <th>Mei</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td><?php echo $barang[0][0]?></td>
+            <td><?php echo $barang[0][1]?></td>
+            <td><?php echo $barang[0][2]?></td>
+            <td><?php echo $barang[0][3]?></td>
+            <td><?php echo $barang[0][4]?></td>
+            <td><?php echo $barang[0][5]?></td>
+            <td><?php echo $barang[0][6]?></td>
+        </tr>
+        <tr>
+            <td><?php echo $barang[1][0]?></td>
+            <td><?php echo $barang[1][1]?></td>
+            <td><?php echo $barang[1][2]?></td>
+            <td><?php echo $barang[1][3]?></td>
+            <td><?php echo $barang[1][4]?></td>
+            <td><?php echo $barang[1][5]?></td>
+            <td><?php echo $barang[1][6]?></td>
+        </tr>
+        <tr>
+            <td><?php echo $barang[2][0]?></td>
+            <td><?php echo $barang[2][1]?></td>
+            <td><?php echo $barang[2][2]?></td>
+            <td><?php echo $barang[2][3]?></td>
+            <td><?php echo $barang[2][4]?></td>
+            <td><?php echo $barang[2][5]?></td>
+            <td><?php echo $barang[2][6]?></td>
+        </tr>
+        <tr>
+            <td><?php echo $barang[3][0]?></td>
+            <td><?php echo $barang[3][1]?></td>
+            <td><?php echo $barang[3][2]?></td>
+            <td><?php echo $barang[3][3]?></td>
+            <td><?php echo $barang[3][4]?></td>
+            <td><?php echo $barang[3][5]?></td>
+            <td><?php echo $barang[3][6]?></td>
+        </tr>
+        <tr>
+            <td><?php echo $barang[4][0]?></td>
+            <td><?php echo $barang[4][1]?></td>
+            <td><?php echo $barang[4][2]?></td>
+            <td><?php echo $barang[4][3]?></td>
+            <td><?php echo $barang[4][4]?></td>
+            <td><?php echo $barang[4][5]?></td>
+            <td><?php echo $barang[4][6]?></td>
+        </tr>
+        <tr>
+            <td><?php echo $barang[5][0]?></td>
+            <td><?php echo $barang[5][1]?></td>
+            <td><?php echo $barang[5][2]?></td>
+            <td><?php echo $barang[5][3]?></td>
+            <td><?php echo $barang[5][4]?></td>
+            <td><?php echo $barang[5][5]?></td>
+            <td><?php echo $barang[5][6]?></td>
+        </tr>
+        <?php
+        
+        ?>
+    </table>
+</body>
+
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$cars = array (
+  array("Volvo",22,18),
+  array("BMW",15,13),
+  array("Saab",5,2),
+  array("Land Rover",17,15)
+);
+  
+echo $cars[0][0].": In stock: ".$cars[0][1].", sold: ".$cars[0][2].".<br>";
+echo $cars[1][0].": In stock: ".$cars[1][1].", sold: ".$cars[1][2].".<br>";
+echo $cars[2][0].": In stock: ".$cars[2][1].", sold: ".$cars[2][2].".<br>";
+echo $cars[3][0].": In stock: ".$cars[3][1].", sold: ".$cars[3][2].".<br>";
+?>
+
+</body>
+</html>
+
+
+
+<?php
+$barang = array(
+    array("Komputer", 100, 90, 120, 80, 110, 500),
+    array("Laptop", 50, 70, 110, 100, 80, 410),
+    array("Hp", 150, 200, 160, 110, 90, 710),
+    array("Ps", 40, 20, 60, 30, 70, 220),
+    array("Tablet", 110, 130, 100, 80, 50, 470),
+    array("Modem", 350, 200, 100, 130, 230, 1010)
+);
+
+
+echo "<table width = 500 border =1>
+<tr>
+<td>Laporan Penjualan barang akhir bulan </td>
+</tr>
+<table width = 500 border =1>
+<tr>
+<td>Nama Barang</td>
+<td>Januari</td>
+<td>Februari</td>
+<td>Maret</td>
+<td>April</td>
+<td>Mei</td>
+<td>Total</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>";
+
+?>

@@ -1,0 +1,114 @@
+
+
+
+<!-- ORI LATIHAN 3 -->
+
+<?php
+
+class penggajihan{
+    private $pokok : 10000000; 
+
+    public function gajiPokok($nama, $jabatan){
+        echo "<h3>Gaji Pokok</h3>";
+        echo "Nama Karyawan : " .$nama. "<br>";
+        echo "Jabatan : " .$jabatan. "<br>";
+        echo "Gaji Pokok : Rp. " . $this-p;
+        
+
+    }
+
+    public function tunjangan($pendidikan){
+        echo "<h3>Tunjangan</h3>";
+        echo "Pendidikan : " .$pendidikan. "<br>";
+        if ($pendidikan == "S1"){
+            echo "Tunjangan Pendidikan : Rp. 1.000.000";
+        }
+    
+        else if ($pendidikan == "SMK"){
+            echo "Tunjangan Pendidikan : Rp. 750.000";
+        }
+    
+        else if ($pendidikan == "SMP"){
+            echo "Tunjangan Pendidikan : Rp. 500.000";
+        }
+    
+        else if($pendidikan == "SD"){
+            echo "Tunjangan Pendidikan : Rp. 250.000";
+        }
+
+    }
+
+    public function potongan($tabungan, $pinjaman){
+        echo "<h3>Potongan</h3>";
+        $this->total = $tabungan + $pinjaman;
+        echo "Tabungan : " . $tabungan . "<br>";
+        echo "Pinjaman : " . $pinjaman . "<br>";
+        echo "Total Potongan : " . $this->total . "<br>";
+    }
+
+    public function gajiBersih($tabungan, $pinjaman){
+        echo "<h3>Total Gaji Bersih</h3>";
+        $this->total1 = ($jabatan + $pendidikan) - $this->total;
+        echo "Total Gaji Bersih : " . $this->total1 . "<br>";
+    }
+
+}
+
+$cetak = new penggajihan();
+
+echo $cetak->gajiPokok("Syifa", "OB");
+echo "<hr>";
+echo $cetak->tunjangan("SD");
+echo "<hr>";
+echo $cetak->potongan(50000, 12000);
+echo "<hr>";
+echo $cetak->gajiBersih();
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function gajiBersih($tabungan, $pinjaman){
+        echo "<h3>Total Gaji Bersih</h3>";
+        $this->total1 = ($jabatan + $pendidikan) - $this->total;
+        echo "Total Gaji Bersih : " . $this->total1 . "<br>";
+    }
+
+
+
+
+
+
+
+
+function nilai($mtk1, $indo1, $ingg1, $pro1){
+            $rata_rata = $mtk1 + $indo1 + $ingg1 + $pro1;
+            $hasil = $rata_rata / 4;
+            echo "Nilai Matematika". $mtk1 . "<br>";
+            echo "Nilai B. Indonesia : " . $indo1 . "<br>";
+            echo "Nilai B. Inggris : " . $ingg1. "<br>";
+            echo "Nilai Produktif  : " . $pro1 . "<br>";
+            echo "Rata-Rata: " . $rata_rata . "<br>";
+            echo "Status : " . $hasil . "<br>";
+        }
+
+        echo $cetak->nilai($mtk, $indo, $ingg, $pro);
+    

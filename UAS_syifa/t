@@ -1,0 +1,88 @@
+<h1><center>Penggajian Karyawan</center></h1>
+    <br>
+    <h3><center>PT. Selalu Makmur Jaya</center></h3>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+<form method ="POST" action = "">
+            <table>
+                <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td><input type='text' name='nama'> </td>
+                </tr>
+                <tr>
+                    <td>Tempat lahir</td>
+                    <td>:</td>
+                    <td><input type='text' name="tempat_lahir"></td>
+                </tr>
+                <tr>
+                    <td>Tanggal lahir</td>
+                    <td>:</td>
+                    <td><input type='date' name="tanggal_lahir"></td>
+                </tr>
+                <tr>
+                    <td>Kelas</td>
+                    <td>:</td>
+                    <td><input type='text' name='kelas'></td>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><input type="submit" name="simpan" value='KIRIM'></td>
+                </tr>
+            </table>
+          </form>
+
+
+
+
+
+
+
+
+
+
+
+
+          <center>
+  <br>
+<?php
+if(isset($_POST['simpan'])){
+    $nama = $_POST['nama'];
+    $status = $_POST['status'];
+    $jk = $_POST['jk'];
+   
+
+    if($status == "Sudah Vaksin"){
+        echo"Nama Anda    : $nama <br>";
+        echo "Jenis Kelamin   : $jk <br>";
+        echo"Status Vaksin    : $status <br>";
+        echo "<br>";
+        echo"<h5>Diizinkan</h5>";
+       
+    }
+    else if($status == "Belum Vaksin"){
+      echo "<td></td>";
+      echo "<td></td>";
+      echo"Nama Anda    : $nama <br>";
+      echo "Jenis Kelamin   : $jk <br>";
+      echo"Status Vaksin  : $status <br>";
+      echo "<br>";
+      echo"<h5>Tidak Diizinkan</h5>";
+      echo "<br>";
+      echo "<a href='https://www.pedulilindungi.id/'>Silahkan Daftar Vaksin</a>";
+      
+    }
+}
+?>
+</center>

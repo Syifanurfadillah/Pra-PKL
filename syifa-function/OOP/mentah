@@ -1,0 +1,21 @@
+<center>
+        <br>
+      <h1><font face="Times New Roman">Data Nilai Mata Pelajaran Produktif</font></h1>
+        <br>
+        <br>
+        <table border="4"  style="width: 67rem;">
+
+        <tr>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Jurusan</th>
+            <th>Mata<br>&ensp; Pelajaran</th>
+            <th>Nilai Harian</th>
+            <th>Nilai Tugas</th>
+            <th>Nilai UTS</th>
+            <th>UAS</th>
+        </tr>
+
+        <tbody>
+        <td>&ensp;<font face="Century Gothic"><?php echo $no[$a];?></font></td>
+        </tbody>
